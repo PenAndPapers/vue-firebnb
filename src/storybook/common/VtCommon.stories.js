@@ -2,12 +2,12 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withKnobs } from '@storybook/addon-knobs'
 
-import VCommon from '@common/VCommon'
+import VtCommon from '@common/VtCommon'
 
 storiesOf('Common', module)
   .addDecorator(withKnobs)
-  .add('VCommon', () => ({
-    components: { VCommon },
-    template: '<VCommon />',
+  .add('VtCommon', () => ({
+    components: { VtCommon },
+    template: '<VtCommon />',
     methods: { action: action('clicked') }
   }))

@@ -54,13 +54,14 @@ services:
     volumes:
       - ./:/usr/share/nginx/html
     working_dir: /usr/share/nginx/html
-    depends_on: 
-      - development
     command: >
-      bash -c "node -v
+      bash -c "ls -la
+      && node -v
       && yarn -v
       && yarn install
-      && yarn run build"
+      && yarn run app:build
+      && chown -R www-data:www-data dist/*
+      && ls -la"
     networks:
       - vue
 

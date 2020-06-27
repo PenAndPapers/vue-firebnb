@@ -2,12 +2,12 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withKnobs } from '@storybook/addon-knobs'
 
-import VElement from '@element/VElement'
+import VtModule from '@module/VtModule'
 
-storiesOf('Element', module)
+storiesOf('Module', module)
   .addDecorator(withKnobs)
-  .add('VElement', () => ({
-    components: { VElement },
-    template: '<VElement />',
+  .add('VtModule', () => ({
+    components: { VtModule },
+    template: '<VtModule />',
     methods: { action: action('clicked') }
   }))

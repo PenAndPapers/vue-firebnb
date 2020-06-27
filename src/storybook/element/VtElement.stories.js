@@ -2,12 +2,12 @@ import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withKnobs } from '@storybook/addon-knobs'
 
-import VSkeleton from '@skeleton/VSkeleton'
+import VtElement from '@element/VtElement'
 
-storiesOf('Skeleton', module)
+storiesOf('Element', module)
   .addDecorator(withKnobs)
-  .add('VSkeleton', () => ({
-    components: { VSkeleton },
-    template: '<VSkeleton />',
+  .add('VtElement', () => ({
+    components: { VtElement },
+    template: '<VtElement />',
     methods: { action: action('clicked') }
   }))

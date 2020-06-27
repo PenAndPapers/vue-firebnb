@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-docs": "^5.3.18",
@@ -47,6 +48,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
+    "tailwindcss": "^1.4.6",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11"
   },
