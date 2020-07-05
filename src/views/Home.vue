@@ -1,33 +1,21 @@
 <template>
-  <div class="home">
-    <img class="block m-auto" alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <VtCommon />
-    <VtElement />
-    <VtLayout />
-    <VtModule />
-    <VtSkeleton />
-  </div>
+  <section class="home">
+    <VtFeaturedModule />
+    <VtHomeModule />
+    <VtTopDistinationModule />
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import VtCommon from '@common/VtCommon'
-import VtElement from '@element/VtElement'
-import VtLayout from '@layout/VtLayout'
-import VtModule from '@module/VtModule'
-import VtSkeleton from '@skeleton/VtSkeleton'
-
+import VtFeaturedModule from '@module/VtFeaturedModule'
+import VtHomeModule from '@module/VtHomeModule'
+import VtTopDistinationModule from '@module/VtTopDistinationModule'
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
-    VtCommon,
-    VtElement,
-    VtLayout,
-    VtModule,
-    VtSkeleton
+    VtFeaturedModule,
+    VtHomeModule,
+    VtTopDistinationModule
   }
 }
 </script>

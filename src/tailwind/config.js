@@ -9,7 +9,8 @@ module.exports = {
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '1280px'
+      xl: '1280px',
+      xxl: '1600px'
     },
     colors: {
       transparent: 'transparent',
@@ -182,8 +183,8 @@ module.exports = {
       full: '9999px'
     },
     borderWidth: {
-      default: '1px',
       0: '0',
+      1: '1px',
       2: '2px',
       4: '4px',
       8: '8px'
@@ -250,28 +251,19 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       montserrat: ['"Montserrat"']
     },
-    fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem'
-    },
+    fontSize: theme => ({
+      ...theme('spacing')
+    }),
     fontWeight: {
-      hairline: '100',
-      thin: '200',
-      light: '300',
-      normal: '400',
-      medium: '500',
-      semibold: '600',
-      bold: '700',
-      extrabold: '800',
-      black: '900'
+      100: '100',
+      200: '200',
+      300: '300',
+      400: '400',
+      500: '500',
+      600: '600',
+      700: '700',
+      800: '800',
+      900: '900'
     },
     height: theme => ({
       auto: 'auto',
@@ -279,10 +271,11 @@ module.exports = {
       full: '100%',
       screen: '100vh'
     }),
-    inset: {
+    inset: theme => ({
       0: '0',
-      auto: 'auto'
-    },
+      auto: 'auto',
+      ...theme('spacing')
+    }),
     letterSpacing: {
       tighter: '-0.05em',
       tight: '-0.025em',
@@ -336,11 +329,12 @@ module.exports = {
       full: '100%',
       ...breakpoints(theme('screens'))
     }),
-    minHeight: {
+    minHeight: theme => ({
       0: '0',
       full: '100%',
-      screen: '100vh'
-    },
+      screen: '100vh',
+      ...theme('spacing')
+    }),
     minWidth: {
       0: '0',
       full: '100%'
@@ -359,6 +353,7 @@ module.exports = {
     opacity: {
       0: '0',
       25: '0.25',
+      35: '0.35',
       50: '0.5',
       75: '0.75',
       100: '1'
@@ -380,7 +375,7 @@ module.exports = {
       11: '11',
       12: '12'
     },
-    padding: theme => theme('spacing'),
+    padding: theme => theme('width'),
     placeholderColor: theme => theme('colors'),
     placeholderOpacity: theme => theme('opacity'),
     space: (theme, { negative }) => ({
@@ -426,6 +421,7 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
+      '47%': '47%',
       full: '100%',
       screen: '100vw'
     }),
