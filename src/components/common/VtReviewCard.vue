@@ -1,7 +1,7 @@
 <template>
   <div class="review-card">
     <div class="flex items-start">
-      <div class="mr-6 text-center">
+      <div class="mr-6 w-24 text-center">
         <img
           class="rounded-full block m-auto"
           :src="review.user.image_url[0]"
@@ -11,7 +11,7 @@
         <p class="text-3 text-gray-700">{{ date }}</p>
       </div>
       <div class="flex-1">
-        <p class="text-4 font-300 clamp-5">{{ review.review }}</p>
+        <p class="text-4 font-300 clamp-2">{{ review.review }}</p>
       </div>
     </div>
   </div>

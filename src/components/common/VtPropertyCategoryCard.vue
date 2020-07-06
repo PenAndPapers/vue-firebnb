@@ -8,7 +8,7 @@
       >
     </div>
     <div class="information p-4">
-      <h4 class="text-5 font-500 leading-none mb-2 min-h-10 clamp-2">{{ category.name }}</h4>
+      <h4 class="text-5 font-500 leading-none mb-2 min-h-6 clamp-2">{{ category.name }}</h4>
       <p class="text-3 min-h-8 clamp-2">{{ category.description }}</p>
     </div>
   </article>

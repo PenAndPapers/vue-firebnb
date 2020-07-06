@@ -41,4 +41,10 @@ export default {
   margin-left: 1rem;
   margin-bottom: 1.5rem;
 }
+
+.wysiwyg ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
 </style>

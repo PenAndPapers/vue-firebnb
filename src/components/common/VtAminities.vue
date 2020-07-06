@@ -15,7 +15,7 @@
         <h5 class="capitalize text-4 font-500">{{ name.replace(/_/g, ' ') }}</h5>
         <p class="text-4 font-300">{{ description }}</p>
       </div>
-      <hr class="my-8">
+      <hr class="mt-8">
     </div>
   </div>
 </template>

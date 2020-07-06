@@ -1,7 +1,7 @@
 <template>
   <div class="home-module w-full">
     <h2 class="text-10 my-12">See what a difference a stay makes</h2>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
       <router-link
         to="/properties"
         v-for="(category, index) in categories"
