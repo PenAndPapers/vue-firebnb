@@ -11,7 +11,7 @@
       <div class="flex items-baseline justify-center">
         <h4 class="name flex-1 text-left text-4 clamp-2">{{ property.name }}</h4>
         <div class="price text-right pl-3">
-          <h4 class="text-5 text-blue-600 font-600">${{ property.price * Math.floor(Math.random() * Math.floor(5) + 1) }} total</h4>
+          <h4 class="text-5 text-blue-600 font-600">${{ totalPrice }} total</h4>
           <h6 class="text-3 text-red-600 font-600">${{ property.price }}/night</h6>
         </div>
       </div>
@@ -45,6 +45,11 @@ export default {
     property: {
       type: Object,
       default: () => {}
+    }
+  },
+  computed: {
+    totalPrice () {
+      return this.property.price * Math.floor(Math.random() * Math.floor(5) + 1)
     }
   },
   components: {

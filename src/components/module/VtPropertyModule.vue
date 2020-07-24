@@ -40,6 +40,11 @@
     <VtReviews :reviews="property.reviews" />
     <hr class="my-12">
     <VtPolicies :policies="property.policy" />
+    <hr class="my-12">
+    <VtRecommendProperty
+      class="mb-12"
+      :properties="recommendedProperties"
+    />
   </div>
 </template>
 
@@ -52,6 +57,7 @@ import VtAboutHost from '@common/VtAboutHost'
 import VtReviews from '@common/VtReviews'
 import VtPolicies from '@common/VtPolicies'
 import VtBookingForm from '@common/VtBookingForm'
+import VtRecommendProperty from '@common/VtRecommendProperty'
 import VtWysiwyg from '@element/VtWysiwyg'
 export default {
   name: 'VtPropertyModule',
@@ -64,20 +70,18 @@ export default {
     VtReviews,
     VtPolicies,
     VtBookingForm,
+    VtRecommendProperty,
     VtWysiwyg
   },
   data () {
     return {
-      property: ''
+      property: '',
+      recommendedProperties: ''
     }
   },
   computed: {
     aminities (property) {
-      if (this.property) {
-        const aminitiesCopy = [...this.property.aminities]
-        return aminitiesCopy[0]
-      }
-      return []
+      return [...this.property.aminities][0]
     }
   },
   methods: {
@@ -87,10 +91,18 @@ export default {
         .then(response => {
           if (response.data.length) this.property = response.data[0]
         })
+    },
+    async getRecommendedProperty () {
+      await fetch('/data/property.json')
+        .then(result => result.json())
+        .then(response => {
+          if (response.data.length) this.recommendedProperties = response.data.slice(5, 9)
+        })
     }
   },
   mounted () {
     this.getProperty()
+    this.getRecommendedProperty()
   }
 }
 </script>
