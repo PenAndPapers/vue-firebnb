@@ -1,9 +1,9 @@
 <template>
   <section class="search-bar flex items-center justify-center border-1 border-gray-500 rounded-md">
-    <div class="location flex-1 p-3 border-r-1 border-gray-500">
-      <div>
+    <div class="location flex-1 border-r-1 border-gray-500">
+      <div class="p-3">
         <label class="block text-3 font-500">Location</label>
-        <input type="text" class="text-4 font-600 w-full" placeholder="Where are you going?">
+        <VtAddLocation />
       </div>
     </div>
     <div class="check-in w-1/6 p-3 border-r-1 border-gray-500">
@@ -18,15 +18,15 @@
         <input type="text" class="text-4 font-600 w-full" placeholder="Add date">
       </div>
     </div>
-    <div
-      class="guest relative w-1/4 p-3 border-r-1 border-gray-500 cursor-pointer"
-      @click="isShowGuest = !isShowGuest"
-    >
-      <div class="cursor-pointer">
+    <div class="guest relative w-1/4 border-r-1 border-gray-500 cursor-pointer">
+      <div
+        class="cursor-pointer p-3"
+        @click="isAddGuest = !isAddGuest"
+      >
         <label class="block text-3 font-500">Guests</label>
-        <input type="text" class="text-4 font-600 w-full" placeholder="Add guests">
+        <span class="text-4 font-500 w-full">Add guests</span>
       </div>
-      <VtAddGuest class="absolute left-0 right-0 top-0 z-30" />
+      <VtAddGuest class="absolute left-0 right-0 top-0 z-30" v-show="isAddGuest"/>
     </div>
     <div class="p-2 flex-none">
       <router-link
@@ -40,15 +40,24 @@
 </template>
 
 <script>
+import VtAddLocation from '@common/VtAddLocation'
 import VtAddGuest from '@common/VtAddGuest'
 export default {
   name: 'VtSearchBar',
   data () {
     return {
-      isShowGuest: false
+      isAddGuest: false
+    }
+  },
+  watch: {
+    $route: {
+      handler (newVal, oldVal) {
+        this.isAddGuest = false
+      }
     }
   },
   components: {
+    VtAddLocation,
     VtAddGuest
   }
 }

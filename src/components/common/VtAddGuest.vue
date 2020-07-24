@@ -6,16 +6,16 @@
       :key="index"
     >
       <div class="">
-        <p>{{ option.type }}</p>
+        <p class="font-500">{{ option.type }}</p>
         <p class="text-3">{{ option.ageRage }}</p>
       </div>
       <div class="">
         <button
-          class="h-6 w-6 inline-flex items-center justify-center rounded-full border-1 border-gray-900 text-5 outline-none focus:outline-none"
+          class="h-8 w-8 inline-flex items-center justify-center rounded-full bg-gray-300 hover:bg-gray-400 text-6 font-300 outline-none focus:outline-none"
           @click="addGuest(option, '-')">-</button>
-        <span class="inline-block min-w-8 text-5 text-center font-300">{{ option.count }}</span>
+        <span class="inline-block min-w-12 text-6 text-center font-300">{{ option.count }}</span>
         <button
-          class="h-6 w-6 inline-flex items-center justify-center rounded-full border-1 border-gray-900 text-5 outline-none focus:outline-none"
+          class="h-8 w-8 inline-flex items-center justify-center rounded-full bg-gray-300 hover:bg-gray-400 text-6 font-300 outline-none focus:outline-none"
           @click="addGuest(option, '+')">+</button>
       </div>
     </div>
