@@ -41,10 +41,7 @@
     <hr class="my-12">
     <VtPolicies :policies="property.policy" />
     <hr class="my-12">
-    <VtRecommendProperty
-      class="mb-12"
-      :properties="recommendedProperties"
-    />
+    <VtRecommendProperty :properties="recommendedProperties" />
   </div>
 </template>
 
@@ -76,7 +73,7 @@ export default {
   data () {
     return {
       property: '',
-      recommendedProperties: ''
+      recommendedProperties: []
     }
   },
   computed: {
@@ -96,7 +93,7 @@ export default {
       await fetch('/data/property.json')
         .then(result => result.json())
         .then(response => {
-          if (response.data.length) this.recommendedProperties = response.data.slice(5, 9)
+          if (response.data.length) this.recommendedProperties = response.data.slice(25, 29)
         })
     }
   },

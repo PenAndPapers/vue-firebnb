@@ -10,7 +10,7 @@
     <div class="information p-4">
       <h4 class="name text-left text-4 clamp-2">{{ property.name }}</h4>
       <div class="price flex items-center justify-between">
-        <h6 class="text-4 text-red-600 font-600">${{ property.price }}/night</h6>
+        <h6 class="text-4 font-600">${{ property.price }}/night</h6>
         <VtRate
           class="flex items-center pl-3"
           :rate="property.rate"

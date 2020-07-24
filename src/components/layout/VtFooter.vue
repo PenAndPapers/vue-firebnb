@@ -1,5 +1,5 @@
 <template>
-  <footer class="container flex items-center justify-between w-xxl m-auto border-t-1 border-gray-500 my-6 pt-2">
+  <footer class="container flex items-center justify-between w-xxl m-auto border-t-1 border-gray-500 mt-12 mb-6 pt-2">
     <div class="text-3">
       Made with Vue JS and Tailwind CSS
     </div>
