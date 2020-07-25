@@ -1,4 +1,4 @@
-export const getters = () => ({
+export const getters = {
   _user (state) {
     return state.user
   },
@@ -8,4 +8,4 @@ export const getters = () => ({
   _isRegister (state) {
     return state.isRegister
   }
-})
+}

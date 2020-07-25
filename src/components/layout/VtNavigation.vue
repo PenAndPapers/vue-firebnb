@@ -11,23 +11,29 @@
         </router-link>
       </div>
       <div class="menu flex items-center">
-        <VtLogin />
-        <VtRegister />
-        <VtAccountButton :first-name="'Bernadette'" />
+        <button
+          class="activator flex items-center rounded-md bg-white hover:bg-gray-100 shadow-sm hover:shadow-md outline-none focus:outline-none mr-2 px-8 py-2"
+          @click="$store.dispatch('Auth/showLogin')"
+        >
+          Login
+        </button>
+        <button
+          class="activator flex items-center rounded-md bg-white hover:bg-gray-100 shadow-sm hover:shadow-md outline-none focus:outline-none px-8 py-2"
+          @click="$store.dispatch('Auth/showRegistration')"
+        >
+          Create an account
+        </button>
+        <VtAccountButton v-if="false" :first-name="'Bernadette'" />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
-import VtLogin from '@common/VtLogin'
-import VtRegister from '@common/VtRegister'
 import VtAccountButton from '@common/VtAccountButton'
 export default {
   name: 'VtNavigation',
   components: {
-    VtLogin,
-    VtRegister,
     VtAccountButton
   }
 }
