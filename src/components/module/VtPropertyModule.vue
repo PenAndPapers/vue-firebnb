@@ -19,7 +19,7 @@
             <p class="text-3">{{ property.package }}</p>
           </div>
           <img
-            class="rounded-full bg-black"
+            class="rounded-full bg-gray-400"
             :src="property.host.image_url[0]"
             alt=""
           >

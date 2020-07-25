@@ -1,7 +1,7 @@
 <template>
   <div
     id="mapbox"
-    class="relative bg-black w-full h-120"
+    class="relative bg-gray-400 w-full h-120"
   />
 </template>
 

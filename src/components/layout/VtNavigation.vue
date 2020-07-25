@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-200 p-5">
+  <nav class="bg-gray-900 p-5">
     <div class="container w-xxl m-auto flex justify-between">
       <div>
         <router-link

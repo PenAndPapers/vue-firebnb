@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-app">
     <VtNavigation />
     <main class="container w-xxl m-auto">
       <VtSearchBar class="my-6" />

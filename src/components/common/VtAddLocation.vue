@@ -1,6 +1,9 @@
 <template>
   <div class="add-location">
-    <input type="text" id="search-location" class="text-4 font-600 h-auto w-full p-0 border-0" placeholder="Where are you going?">
+    <div class="p-3">
+      <label class="block text-3 font-500">Location</label>
+      <input type="text" class="h-auto w-full p-0 bg-transparent border-0 text-4 font-600" placeholder="Where are you going?">
+    </div>
   </div>
 </template>
 
@@ -41,8 +44,7 @@ export default {
     }
   },
   mounted () {
-    this.loadSearchScript()
+    // this.loadSearchScript()
   }
-
 }
 </script>
