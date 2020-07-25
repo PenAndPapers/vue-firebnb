@@ -10,5 +10,8 @@ export const actions = {
   hideAuthForm ({ commit }) {
     commit('IS_LOGIN', false)
     commit('IS_REGISTER', false)
+  },
+  authenticateAccount ({ commit }, payload) {
+    commit('USER', payload)
   }
 }

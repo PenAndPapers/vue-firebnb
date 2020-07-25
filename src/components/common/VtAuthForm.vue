@@ -5,17 +5,18 @@
       <h2 class="mb-2 text-center text-6 font-500 leading-none">{{ isLogin ? 'Login' : 'Create an account' }}</h2>
       <div class="flex-1 border-t-1 border-gray-500 mb-4" />
 
-      <form action="#">
+      <form @submit.stop.prevent="authenticateAccount">
         <div class="form-row mb-3 py-1 px-4 border-1 border-gray-500 rounded-md">
           <label class="block text-3" for="email">Email</label>
-          <input type="text" id="email" class="w-full bg-transparent font-500" maxlength="50">
+          <input type="text" id="email" class="w-full bg-transparent font-500" maxlength="50" v-model="email">
         </div>
         <div class="form-row mb-3 py-1 px-4 border-1 border-gray-500 rounded-md">
           <label class="block text-3" for="password">Password</label>
-          <input type="password" id="password" class="w-full bg-transparent font-500" maxlength="50">
+          <input type="password" id="password" class="w-full bg-transparent font-500" maxlength="50" v-model="password">
         </div>
         <button class="w-full py-3 px-4 bg-red-600 hover:bg-red-700 rounded-md text-white text-4 font-400 outline-none focus:outline-none">{{ isLogin ? 'Login' : 'Register' }}</button>
       </form>
+
       <div class="divider flex items-center my-4">
         <div class="flex-1 border-t-1 border-gray-500" />
         <span class="mx-4">or</span>
@@ -43,11 +44,27 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'VtRegister',
+  data () {
+    return {
+      email: null,
+      password: null
+    }
+  },
   computed: {
     ...mapGetters({
       isLogin: 'Auth/_isLogin',
       isRegister: 'Auth/_isRegister'
     })
+  },
+  methods: {
+    authenticateAccount () {
+      const payload = {
+        email: this.email.trim(),
+        password: this.password.trim()
+      }
+
+      this.$store.dispatch('Auth/authenticateAccount', payload)
+    }
   }
 }
 </script>
