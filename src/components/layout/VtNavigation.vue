@@ -11,19 +11,23 @@
         </router-link>
       </div>
       <div class="menu flex items-center">
-        <VtAccountButton
-          :first-name="'Gabby'"
-        />
+        <VtLogin />
+        <VtRegister />
+        <VtAccountButton :first-name="'Bernadette'" />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import VtLogin from '@common/VtLogin'
+import VtRegister from '@common/VtRegister'
 import VtAccountButton from '@common/VtAccountButton'
 export default {
   name: 'VtNavigation',
   components: {
+    VtLogin,
+    VtRegister,
     VtAccountButton
   }
 }
