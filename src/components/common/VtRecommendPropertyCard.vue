@@ -2,7 +2,7 @@
   <article class="recommend-property-card text-center overflow-hidden rounded-lg shadow-md hover:shadow-lg cursor-pointer">
     <div class="relative pb-7/12">
       <img
-        class="w-full bg-gray-400 absolute top-0 bottom-0 left-0 right-0 h-full w-full"
+        class="w-full bg-gray-500 absolute top-0 bottom-0 left-0 right-0 h-full w-full"
         :src="property.image_url[0]"
         alt=""
       >

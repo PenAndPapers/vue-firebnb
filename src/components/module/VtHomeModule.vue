@@ -7,18 +7,18 @@
         v-for="(category, index) in categories"
         :key="index"
       >
-        <VtPropertyCategoryCard :category="category"/>
+        <VtCategoryCard :category="category"/>
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
-import VtPropertyCategoryCard from '@common/VtPropertyCategoryCard'
+import VtCategoryCard from '@common/VtCategoryCard'
 export default {
   name: 'VtHomeModule',
   components: {
-    VtPropertyCategoryCard
+    VtCategoryCard
   },
   data () {
     return {

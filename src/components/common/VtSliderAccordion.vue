@@ -1,7 +1,7 @@
 <template>
   <div class="slider-accordion flex w-full">
     <div
-      class="item bg-cover bg-center bg-gray-400 relative pb-2/5 transition-all duration-300"
+      class="item bg-cover bg-center bg-gray-500 relative pb-2/5 transition-all duration-300"
       :class="[index === 0 ? 'expanded w-1/2' : 'w-1/6']"
       v-for="(item, index) in items"
       :key="index"
