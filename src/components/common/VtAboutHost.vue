@@ -2,7 +2,7 @@
   <div class="about-host">
     <div class="flex items-center mb-6">
       <img
-        class="rounded-full bg-gray-500 mr-4"
+        class="rounded-full bg-gray-900 mr-4"
         :src="host.image_url[0]"
         alt=""
       >

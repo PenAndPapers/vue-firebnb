@@ -7,21 +7,21 @@
         <span>( {{ property.reviews.length }} )</span>
       </p>
     </div>
-    <div class="border-1 border-gray-300 my-4 rounded-md">
+    <div class="border-1 border-gray-500 my-4 rounded-md">
       <div class="flex">
         <div class="flex-1 p-4">
           <label class="block text-3 font-500" for="">Check in</label>
-          <input type="text" class="text-4 font-600 w-full" placeholder="Add date">
+          <span class="text-4 font-500 w-full">Add date</span>
         </div>
-        <div class="flex-1 border-l-1 border-gray-300 p-4">
+        <div class="flex-1 border-l-1 border-gray-500 p-4">
           <label class="block text-3 font-500" for="">Check out</label>
-          <input type="text" class="text-4 font-600 w-full" placeholder="Add date">
+          <span class="text-4 font-500 w-full">Add date</span>
         </div>
       </div>
       <div class="flex">
-        <div class="flex-1 border-t-1 border-gray-300 p-4">
+        <div class="flex-1 border-t-1 border-gray-500 p-4">
           <label class="block text-3 font-500" for="">Guest</label>
-          <input type="text" class="text-4 font-600 w-full" placeholder="Add guests">
+          <span class="text-4 font-400 w-full">Add guests</span>
         </div>
       </div>
     </div>

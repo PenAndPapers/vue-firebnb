@@ -6,7 +6,7 @@
     <div class="p-2 flex-none">
       <router-link
         to="/properties"
-        class="bg-red-600 hover:bg-red-700 rounded-md flex items-center h-full text-white font-600 px-5 py-3 outline-none focus:outline-none"
+        class="flex items-center h-full px-5 py-3 bg-red-600 hover:bg-red-700 text-4 text-white font-500 outline-none focus:outline-none rounded-md"
       >
         <i class="material-icons text-white mr-2">search</i> Search
       </router-link>

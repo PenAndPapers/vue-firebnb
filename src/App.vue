@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-app">
     <VtNavigation />
-    <main class="container w-xxl m-auto">
+    <main class="container w-xxl m-auto min-h-screen">
       <VtSearchBar class="my-6" />
       <router-view/>
     </main>

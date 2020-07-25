@@ -58,12 +58,15 @@ export default {
   },
   methods: {
     authenticateAccount () {
+      if (!this.email || !this.password) return false
+
       const payload = {
         email: this.email.trim(),
         password: this.password.trim()
       }
 
       this.$store.dispatch('Auth/authenticateAccount', payload)
+      this.email = this.password = null
     }
   }
 }

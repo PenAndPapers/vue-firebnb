@@ -12,29 +12,40 @@
       </div>
       <div class="menu flex items-center">
         <button
-          class="activator flex items-center rounded-md bg-white hover:bg-gray-100 shadow-sm hover:shadow-md outline-none focus:outline-none mr-2 px-8 py-2"
+          class="activator flex items-center mr-2 px-4 py-2 rounded-md bg-transparent text-white text-5 font-500 hover:underline outline-none focus:outline-none"
           @click="$store.dispatch('Auth/showLogin')"
+          v-if="!user"
         >
           Login
         </button>
         <button
-          class="activator flex items-center rounded-md bg-white hover:bg-gray-100 shadow-sm hover:shadow-md outline-none focus:outline-none px-8 py-2"
+          class="activator flex items-center px-4 py-2 rounded-md bg-transparent text-white text-5 font-500 hover:underline outline-none focus:outline-none"
           @click="$store.dispatch('Auth/showRegistration')"
+          v-if="!user"
         >
           Create an account
         </button>
-        <VtAccountButton v-if="false" :first-name="'Bernadette'" />
+        <VtAccountButton
+          :first-name="'Bernadette'"
+          v-if="user"
+        />
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import VtAccountButton from '@common/VtAccountButton'
 export default {
   name: 'VtNavigation',
   components: {
     VtAccountButton
+  },
+  computed: {
+    ...mapGetters({
+      user: 'Auth/_user'
+    })
   }
 }
 </script>

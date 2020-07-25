@@ -8,7 +8,7 @@
         :class="[[0, 5].includes(index) ? 'col-span-5' : 'col-span-3', [1,4].includes(index) ? 'col-span-4' : '']"
       >
         <img
-          class="absolute h-full w-full bg-gray-500"
+          class="absolute h-full w-full bg-gray-900"
           :src="image"
           alt=""
         >

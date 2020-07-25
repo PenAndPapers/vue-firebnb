@@ -11,7 +11,22 @@ export const actions = {
     commit('IS_LOGIN', false)
     commit('IS_REGISTER', false)
   },
-  authenticateAccount ({ commit }, payload) {
-    commit('USER', payload)
+  authenticateAccount ({ commit, dispatch }, payload) {
+    if (typeof payload === 'object') {
+      commit('USER', payload)
+      dispatch('hideAuthForm')
+      console.log(this)
+    }
+  },
+  logOut ({ commit }) {
+    return new Promise((resolve, reject) => {
+      commit('USER', null)
+      resolve({
+        data: {
+          logout: true,
+          message: 'User logged out.'
+        }
+      })
+    })
   }
 }

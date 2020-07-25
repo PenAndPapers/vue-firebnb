@@ -7,7 +7,7 @@
       <span class="block text-3 font-500">Guests</span>
       <span class="block text-4 font-500 w-full">Add guests</span>
     </div>
-    <div class="dropdown w-full absolute top-0 z-30 bg-white shadow-lg" v-show="isAddGuest">
+    <div class="dropdown w-full absolute top-0 z-30 rouded-bl-md rounded-br-md bg-white shadow-lg" v-show="isAddGuest">
       <div
         class="option flex items-center justify-between px-3 py-4"
         v-for="(option, index) in options"
